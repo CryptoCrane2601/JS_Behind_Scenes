@@ -33,10 +33,24 @@
 
 // HOISTING PRACTICE:
 
+// Variables:
 console.log(me);
-console.log(job);
-console.log(year);
+// console.log(job);
+// console.log(year);
 
 var me = 'Dejan';
 let job = 'Salesman';
 const year = 1989;
+
+// Functions
+// console.log(addDecl(2, 3)); // 5
+// console.log(addExpr(2, 3)); // Error - cannot access
+// console.log(addArr(2, 3)); // Error - cannot access
+
+function addDecl(a, b) {
+  return a + b;
+}
+const addExpr = function (a, b) {
+  return a + b;
+};
+const addArr = (a, b) => a + b;
