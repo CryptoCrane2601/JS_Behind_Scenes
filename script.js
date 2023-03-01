@@ -50,7 +50,23 @@ const year = 1989;
 function addDecl(a, b) {
   return a + b;
 }
+
+// can not work
 const addExpr = function (a, b) {
   return a + b;
 };
-const addArr = (a, b) => a + b;
+
+// can not work
+var addArr = (a, b) => a + b;
+
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
