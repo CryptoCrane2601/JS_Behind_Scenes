@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // function calcAge(birthYear) {
 //   const age = 2023 - birthYear;
@@ -74,3 +74,34 @@ const z = 3;
 // This Keyword
 
 console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2023 - birthYear);
+  console.log(this);
+};
+
+calcAge(1989);
+
+const calcAgeArrow = birthYear => {
+  console.log(2023 - birthYear);
+  console.log(this);
+};
+
+calcAgeArrow(1989);
+
+const dejan = {
+  year: 1989,
+  calcAge: function () {
+    console.log(2025 - this.year);
+  },
+};
+
+dejan.calcAge();
+
+const katarina = {
+  year: 1996,
+};
+
+katarina.calcAge = dejan.calcAge;
+
+console.log(katarina.calcAge());
