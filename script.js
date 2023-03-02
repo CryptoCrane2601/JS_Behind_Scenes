@@ -104,4 +104,7 @@ const katarina = {
 
 katarina.calcAge = dejan.calcAge;
 
-console.log(katarina.calcAge());
+katarina.calcAge();
+
+const f = dejan.calcAge;
+f();
