@@ -34,77 +34,92 @@
 // HOISTING PRACTICE:
 
 // Variables:
-console.log(me);
+// console.log(me);
 // console.log(job);
 // console.log(year);
 
-var me = 'Dejan';
-let job = 'Salesman';
-const year = 1989;
+// var me = 'Dejan';
+// let job = 'Salesman';
+// const year = 1989;
 
 // Functions
 // console.log(addDecl(2, 3)); // 5
 // console.log(addExpr(2, 3)); // Error - cannot access
 // console.log(addArr(2, 3)); // Error - cannot access
 
-function addDecl(a, b) {
-  return a + b;
-}
+// function addDecl(a, b) {
+//   return a + b;
+// }
 
-// can not work
-const addExpr = function (a, b) {
-  return a + b;
-};
+// // can not work
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
 
-// can not work
-var addArr = (a, b) => a + b;
+// // can not work
+// var addArr = (a, b) => a + b;
 
-if (!numProducts) deleteShoppingCart();
+// if (!numProducts) deleteShoppingCart();
 
-var numProducts = 10;
+// var numProducts = 10;
 
-function deleteShoppingCart() {
-  console.log('All products deleted');
-}
+// function deleteShoppingCart() {
+//   console.log('All products deleted');
+// }
 
-var x = 1;
-let y = 2;
-const z = 3;
+// var x = 1;
+// let y = 2;
+// const z = 3;
 
 // This Keyword
 
-console.log(this);
+// console.log(this);
 
-const calcAge = function (birthYear) {
-  console.log(2023 - birthYear);
-  console.log(this);
-};
+// const calcAge = function (birthYear) {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// };
 
-calcAge(1989);
+// calcAge(1989);
 
-const calcAgeArrow = birthYear => {
-  console.log(2023 - birthYear);
-  console.log(this);
-};
+// const calcAgeArrow = birthYear => {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// };
 
-calcAgeArrow(1989);
+// calcAgeArrow(1989);
+
+// const dejan = {
+//   year: 1989,
+//   calcAge: function () {
+//     console.log(2025 - this.year);
+//   },
+// };
+
+// dejan.calcAge();
+
+// const katarina = {
+//   year: 1996,
+// };
+
+// katarina.calcAge = dejan.calcAge;
+
+// katarina.calcAge();
+
+// const f = dejan.calcAge;
+// // f(); // error, dont have a object
+
+// Regular functions vs Arrow functions
 
 const dejan = {
+  firstname: 'Dejan',
   year: 1989,
   calcAge: function () {
-    console.log(2025 - this.year);
+    console.log(this);
+    console.log(2023 - this.year);
   },
+  greet: () => console.log(`Hey ${this.firstname}`),
 };
 
-dejan.calcAge();
-
-const katarina = {
-  year: 1996,
-};
-
-katarina.calcAge = dejan.calcAge;
-
-katarina.calcAge();
-
-const f = dejan.calcAge;
-f();
+dejan.greet();
+console.log(this.firstname);
