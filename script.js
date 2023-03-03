@@ -118,8 +118,15 @@ const dejan = {
     console.log(this);
     console.log(2023 - this.year);
   },
-  greet: () => console.log(`Hey ${this.firstname}`),
+
+  const isMillenial =  function () {
+    console.log(this.year >= 1981 && this.year <= 1996);
+  }
+
+  greet: function () {
+    console.log(`Hey ${this.firstname}`);
+  },
 };
 
 dejan.greet();
-console.log(this.firstname);
+dejan.calcAge();
