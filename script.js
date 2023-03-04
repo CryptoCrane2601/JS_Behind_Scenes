@@ -111,22 +111,38 @@
 
 // Regular functions vs Arrow functions
 
-const dejan = {
-  firstname: 'Dejan',
-  year: 1989,
-  calcAge: function () {
-    console.log(this);
-    console.log(2023 - this.year);
-  },
+// const dejan = {
+//   firstname: 'Dejan',
+//   year: 1989,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2023 - this.year);
+//   },
 
-  const isMillenial =  function () {
-    console.log(this.year >= 1981 && this.year <= 1996);
-  }
+//   const isMillenial =  function () {
+//     console.log(this.year >= 1981 && this.year <= 1996);
+//   }
 
-  greet: function () {
-    console.log(`Hey ${this.firstname}`);
-  },
+//   greet: function () {
+//     console.log(`Hey ${this.firstname}`);
+//   },
+// };
+
+// dejan.greet();
+// dejan.calcAge();
+
+let age = 33;
+let oldAge = age;
+age = 34;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  age: 34,
+  name: 'Dejan',
 };
 
-dejan.greet();
-dejan.calcAge();
+const friend = me;
+friend.age = 26;
+console.log('Friend:', friend);
+console.log('Me:', me);
