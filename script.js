@@ -170,9 +170,16 @@ const katarina2 = {
   firstName: 'Katarina',
   lastName: 'Perc',
   age: 26,
+  family: ['Bora', 'Branka'],
 };
-
+// Copy objecy in heap
 const katarinaCopy = Object.assign({}, katarina2);
 katarinaCopy.lastName = 'Kurcubic';
+console.log('Before marriage:', katarina2);
+console.log('After marriage:', katarinaCopy);
+
+katarinaCopy.family.push('Dejan');
+katarinaCopy.family.push('Ivana');
+
 console.log('Before marriage:', katarina2);
 console.log('After marriage:', katarinaCopy);
