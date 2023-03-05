@@ -147,13 +147,13 @@
 // console.log('Friend:', friend);
 // console.log('Me:', me);
 
-// Primitives objects in Stack
+// Primitive types in Stack
 let lastName = 'Perc';
 let oldlastName = lastName;
 lastName = 'Kurcubic';
 console.log(lastName, oldlastName);
 
-// Object in Heap
+// Object in Heap - refferce types
 const katarina = {
   firstName: 'Katarina',
   lastName: 'Perc',
@@ -161,3 +161,18 @@ const katarina = {
 };
 
 const marriedKatarina = katarina;
+marriedKatarina.lastName = 'Kurcubic';
+console.log('Before marriage:', katarina);
+console.log('After marriage:', marriedKatarina);
+
+// Copying objects
+const katarina2 = {
+  firstName: 'Katarina',
+  lastName: 'Perc',
+  age: 26,
+};
+
+const katarinaCopy = Object.assign({}, katarina2);
+katarinaCopy.lastName = 'Kurcubic';
+console.log('Before marriage:', katarina2);
+console.log('After marriage:', katarinaCopy);
