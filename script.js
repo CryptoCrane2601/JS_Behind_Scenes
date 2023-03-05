@@ -131,18 +131,33 @@
 // dejan.greet();
 // dejan.calcAge();
 
-let age = 33;
-let oldAge = age;
-age = 34;
-console.log(age);
-console.log(oldAge);
+// let age = 33;
+// let oldAge = age;
+// age = 34;
+// console.log(age);
+// console.log(oldAge);
 
-const me = {
-  age: 34,
-  name: 'Dejan',
+// const me = {
+//   age: 34,
+//   name: 'Dejan',
+// };
+
+// const friend = me;
+// friend.age = 26;
+// console.log('Friend:', friend);
+// console.log('Me:', me);
+
+// Primitives objects in Stack
+let lastName = 'Perc';
+let oldlastName = lastName;
+lastName = 'Kurcubic';
+console.log(lastName, oldlastName);
+
+// Object in Heap
+const katarina = {
+  firstName: 'Katarina',
+  lastName: 'Perc',
+  age: 26,
 };
 
-const friend = me;
-friend.age = 26;
-console.log('Friend:', friend);
-console.log('Me:', me);
+const marriedKatarina = katarina;
